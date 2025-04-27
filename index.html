@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guy Ben David - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="header-left">
+            <div class="fixed-profile-pic">
+                <img src="profile.jpg" alt="Guy Ben David">
+            </div>
+            <div class="fixed-contact-info">
+                <ul>
+                    <li><i class="fas fa-envelope"></i> guybd9@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +972-54-910-5363</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Azor, Israel</li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/gbd9" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <header class="header-right">
+            <h1>Guy Ben David</h1>
+            <p>Information Systems & Business Student</p>
+        </header>
+    </div>
+    <div style="text-align: center; margin: 20px;">
+        <a href="Guy_Ben_David_CV.pdf" download class="download-btn">Download Resume (PDF)</a>
+    </div>
+    <div class="tab-buttons">
+        <button class="tab-btn" onclick="showTab('home', event)"><i class="fas fa-home"></i> Home</button>
+        <button class="tab-btn" onclick="showTab('objective', event)"><i class="fas fa-bullseye"></i> Objective</button>
+        <button class="tab-btn" onclick="showTab('experience', event)"><i class="fas fa-briefcase"></i> Experience</button>
+        <button class="tab-btn" onclick="showTab('skills', event)"><i class="fas fa-tools"></i> Skills</button>
+        <button class="tab-btn" onclick="showTab('education', event)"><i class="fas fa-graduation-cap"></i> Education</button>
+    </div>
+
+    <main>
+        <div class="tab-content" id="home" style="display:block;">
+            <h2>About Me</h2>
+
+
+            <p>Hello! I'm Guy Ben David, a passionate Information Systems and Business student from Azor, Israel.
+I thrive on learning new technologies, solving problems, and bringing positive energy to every project.
+I'm known for being a fast learner, highly motivated, and deeply committed to every task I take on.
+Whether it's analyzing a complex system or mentoring a team, I bring both technical skills and people skills to the table.
+When I'm not studying or working, you'll probably find me playing basketball, following Formula 1 races, exploring music, or planning my next trip.
+I believe in lifelong learning, staying curious, and combining technology with creativity.
+I'm excited to start my professional journey and make an impact!</p>
+        </div>
+        <div class="tab-content" id="objective" style="display:none;">
+            <h2>Objective</h2>
+            <p>My objective is to apply my growing knowledge in information systems, technology, and management to real-world challenges.
+I'm passionate about understanding how systems work, ensuring their quality, and optimizing them to their fullest potential.
+With a strong background in customer service, team leadership, and technical learning, I'm eager to transition into the tech industry and contribute to high-quality projects.
+My focus is on growth, impact, and always delivering my best work.</p>
+        </div>
+
+        <div class="tab-content" id="experience" style="display:none;">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Sales Representative – Migdal Insurance:</strong> Top-performing travel insurance sales agent, trained new employees, used Salesforce CRM. Consistently exceeded goals through persistence, deep client understanding, and a proactive attitude.</li>
+                <li><strong>Shift Supervisor – Femi:</strong> Promoted quickly, managed team performance and escalations, maintained service quality. Developed leadership skills by mentoring a diverse team and handling high-pressure situations with professionalism.</li>
+                <li><strong>Combat Engineering Corps – IDF:</strong> Squad commander and trainer for operational readiness, discharged as Staff Sergeant. Led high-stress operations, trained future commanders, and demonstrated resilience, teamwork, and discipline.</li>
+                <li><strong>Store Manager – Novar Gas Station:</strong> Oversaw operations, inventory, and supplier coordination. Balanced operational excellence with superior customer service to ensure daily success.</li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="skills" style="display:none;">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python, SQL, Visual Studio Code, JavaScript — used for building and analyzing systems.</li>
+                <li>Advanced Excel, Office 365, PowerPoint, BI Tools — for reporting, data analysis, and project management.</li>
+                <li>CRM systems (Salesforce) — familiar with managing client data and tracking interactions.</li>
+                <li>Manual software testing principles, Agile methodology — strong understanding of quality processes and agile teamwork.</li>
+                <li>Fast learner, highly motivated, problem-solver — passionate about continuous improvement and personal growth.</li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="education" style="display:none;">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>B.A. in Management & Information Systems</strong> – The College of Management Academic Studies, Rishon LeZion, Israel, 2023–Present</li>
+                <li><strong>High School Diploma – Physical Training Major (Basketball)</strong> – Kiryat Sharett High School, Holon, Israel, 2013–2016</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <script>
+        function showTab(tabId, event) {
+            var tabs = document.getElementsByClassName('tab-content');
+        
+            var buttons = document.getElementsByClassName('tab-btn');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active-tab');
+            }
+            event.target.classList.add('active-tab');
+            
+            // עושה fade out לכל הטאבים
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.opacity = '0';
+                tabs[i].style.transition = 'opacity 0.5s ease';
+            }
+        
+            setTimeout(function() {
+                for (var i = 0; i < tabs.length; i++) {
+                    tabs[i].style.display = 'none';
+                }
+                var selectedTab = document.getElementById(tabId);
+                selectedTab.style.display = 'block';
+                setTimeout(function() {
+                    selectedTab.style.opacity = '1';
+                }, 50);
+            }, 300);
+        }
+        </script>
+
+</body>
+</html>
