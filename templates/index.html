@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MRY9CG73XZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-MRY9CG73XZ');
+</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guy Ben David - Resume</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
     <div class="header-container">
         <div class="header-left">
             <div class="fixed-profile-pic">
-                <img src="profile.jpg" alt="Guy Ben David">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Guy Ben David">
             </div>
             <div class="fixed-contact-info">
                 <ul>
@@ -31,7 +39,7 @@
         </header>
     </div>
     <div style="text-align: center; margin: 20px;">
-        <a href="Guy_Ben_David_CV.pdf" download class="download-btn">Download Resume (PDF)</a>
+        <a href="{{ url_for('static', filename='files/Guy_Ben_David_CV.pdf') }}" download class="download-btn">Download Resume (PDF)</a>
     </div>
     <div class="tab-buttons">
         <button class="tab-btn" onclick="showTab('home', event)"><i class="fas fa-home"></i> Home</button>
