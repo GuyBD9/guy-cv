@@ -288,8 +288,8 @@ a {
 
   .fixed-profile-pic {
     position: static;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     margin: 10px auto;
   }
 
@@ -302,7 +302,10 @@ a {
   .fixed-contact-info {
     position: static;
     text-align: center;
-    margin-bottom: 15px;
+    font-size: 12px;
+    width: auto;
+    padding: 8px;
+    margin-bottom: 10px;
   }
 
   .download-btn {
@@ -332,5 +335,3 @@ a {
   }
 
 }
-
-
