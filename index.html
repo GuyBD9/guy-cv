@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MRY9CG73XZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MRY9CG73XZ');
-</script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guy Ben David - Resume</title>
+
+    <!-- Google Fonts and Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRY9CG73XZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MRY9CG73XZ');
+    </script>
 </head>
 <body>
 
+    <!-- =================== Header Section =================== -->
     <div class="header-container">
+        <!-- Profile Picture + Contact -->
         <div class="header-left">
             <div class="fixed-profile-pic">
                 <img src="profile.jpg" alt="Guy Ben David">
@@ -34,15 +40,20 @@
                 </ul>
             </div>
         </div>
-    
+
+        <!-- Main Title -->
         <header class="header-right">
             <h1>Guy Ben David</h1>
             <p>Information Systems & Business Student</p>
         </header>
     </div>
+
+    <!-- =================== Download Button =================== -->
     <div style="text-align: center; margin: 20px;">
         <a href="Guy_Ben_David_CV.pdf" download class="download-btn">Download Resume (PDF)</a>
     </div>
+
+    <!-- =================== Tab Navigation =================== -->
     <div class="tab-buttons">
         <button class="tab-btn" onclick="showTab('home', event)"><i class="fas fa-home"></i> Home</button>
         <button class="tab-btn" onclick="showTab('objective', event)"><i class="fas fa-bullseye"></i> Objective</button>
@@ -51,28 +62,33 @@
         <button class="tab-btn" onclick="showTab('education', event)"><i class="fas fa-graduation-cap"></i> Education</button>
     </div>
 
+    <!-- =================== Tab Content Area =================== -->
     <main>
-        <div class="tab-content" id="home" style="display:block;">
+        <!-- Home Section -->
+        <div class="tab-content" id="home" style="display: block;">
             <h2>About Me</h2>
-
-
             <p>Hello! I'm Guy Ben David, a passionate Information Systems and Business student from Azor, Israel.
-I thrive on learning new technologies, solving problems, and bringing positive energy to every project.
-I'm known for being a fast learner, highly motivated, and deeply committed to every task I take on.
-Whether it's analyzing a complex system or mentoring a team, I bring both technical skills and people skills to the table.
-When I'm not studying or working, you'll probably find me playing basketball, following Formula 1 races, exploring music, or planning my next trip.
-I believe in lifelong learning, staying curious, and combining technology with creativity.
-I'm excited to start my professional journey and make an impact!</p>
+                I thrive on learning new technologies, solving problems, and bringing positive energy to every project.
+                I'm known for being a fast learner, highly motivated, and deeply committed to every task I take on.
+                Whether it's analyzing a complex system or mentoring a team, I bring both technical skills and people skills to the table.
+                When I'm not studying or working, you'll probably find me playing basketball, following Formula 1 races, exploring music, or planning my next trip.
+                I believe in lifelong learning, staying curious, and combining technology with creativity.
+                I'm excited to start my professional journey and make an impact!
+            </p>
         </div>
-        <div class="tab-content" id="objective" style="display:none;">
+
+        <!-- Objective Section -->
+        <div class="tab-content" id="objective" style="display: none;">
             <h2>Objective</h2>
             <p>My objective is to apply my growing knowledge in information systems, technology, and management to real-world challenges.
-I'm passionate about understanding how systems work, ensuring their quality, and optimizing them to their fullest potential.
-With a strong background in customer service, team leadership, and technical learning, I'm eager to transition into the tech industry and contribute to high-quality projects.
-My focus is on growth, impact, and always delivering my best work.</p>
+                I'm passionate about understanding how systems work, ensuring their quality, and optimizing them to their fullest potential.
+                With a strong background in customer service, team leadership, and technical learning, I'm eager to transition into the tech industry and contribute to high-quality projects.
+                My focus is on growth, impact, and always delivering my best work.
+            </p>
         </div>
 
-        <div class="tab-content" id="experience" style="display:none;">
+        <!-- Experience Section -->
+        <div class="tab-content" id="experience" style="display: none;">
             <h2>Experience</h2>
             <ul>
                 <li><strong>Sales Representative – Migdal Insurance:</strong> Top-performing travel insurance sales agent, trained new employees, used Salesforce CRM. Consistently exceeded goals through persistence, deep client understanding, and a proactive attitude.</li>
@@ -82,7 +98,8 @@ My focus is on growth, impact, and always delivering my best work.</p>
             </ul>
         </div>
 
-        <div class="tab-content" id="skills" style="display:none;">
+        <!-- Skills Section -->
+        <div class="tab-content" id="skills" style="display: none;">
             <h2>Skills</h2>
             <ul>
                 <li>Python, SQL, Visual Studio Code, JavaScript — used for building and analyzing systems.</li>
@@ -93,32 +110,37 @@ My focus is on growth, impact, and always delivering my best work.</p>
             </ul>
         </div>
 
-        <div class="tab-content" id="education" style="display:none;">
+        <!-- Education Section -->
+        <div class="tab-content" id="education" style="display: none;">
             <h2>Education</h2>
             <ul>
                 <li><strong>B.Sc in Management & Information Systems</strong> – The College of Management Academic Studies, Rishon LeZion, Israel, 2023–Present</li>
                 <li><strong>High School Diploma – Physical Training Major (Basketball)</strong> – Kiryat Sharett High School, Holon, Israel, 2013–2016</li>
             </ul>
         </div>
-
     </main>
 
+    <!-- =================== Tab Switch Script =================== -->
     <script>
         function showTab(tabId, event) {
             var tabs = document.getElementsByClassName('tab-content');
-        
             var buttons = document.getElementsByClassName('tab-btn');
+
+            // Remove active state from all buttons
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].classList.remove('active-tab');
             }
+
+            // Set active state to clicked button
             event.target.classList.add('active-tab');
-            
-            // עושה fade out לכל הטאבים
+
+            // Fade out all tabs
             for (var i = 0; i < tabs.length; i++) {
                 tabs[i].style.opacity = '0';
                 tabs[i].style.transition = 'opacity 0.5s ease';
             }
-        
+
+            // Show selected tab
             setTimeout(function() {
                 for (var i = 0; i < tabs.length; i++) {
                     tabs[i].style.display = 'none';
@@ -130,7 +152,7 @@ My focus is on growth, impact, and always delivering my best work.</p>
                 }, 50);
             }, 300);
         }
-        </script>
+    </script>
 
 </body>
 </html>

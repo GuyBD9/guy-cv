@@ -1,8 +1,11 @@
+/* =================================== */
+/*           Global Styles             */
+/* =================================== */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* כללי */
 body {
     font-family: Calibri, Arial, sans-serif;
     margin: 0;
@@ -11,16 +14,159 @@ body {
     background-color: #f4f4f4;
 }
 
-/* כותרת ראשית */
-header {
-    background: #0074D9;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-bottom: 20px;
+/* =================================== */
+/*          Typography                 */
+/* =================================== */
+
+h2 {
+    color: #0074D9;
+    border-bottom: 2px solid #0074D9;
+    padding-bottom: 5px;
 }
 
-/* תפריט ניווט */
+h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0074D9;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =================================== */
+/*           Main Layout               */
+/* =================================== */
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* =================================== */
+/*             Header                  */
+/* =================================== */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #164e80;
+    color: white;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-right {
+    text-align: center;
+    font-family: Garamond, serif;
+    font-size: 28px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 1s ease forwards;
+}
+
+/* =================================== */
+/*         Profile Image               */
+/* =================================== */
+
+.fixed-profile-pic {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+    z-index: 1000;
+}
+
+.fixed-profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fixed-profile-pic img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* =================================== */
+/*           Contact Info              */
+/* =================================== */
+
+.fixed-contact-info {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    width: 200px;
+    text-align: left;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.fixed-contact-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.fixed-contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fixed-contact-info ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =================================== */
+/*         Navigation Bar              */
+/* =================================== */
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -43,53 +189,17 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #0074D9;
+    background: #284b64;
     border-radius: 5px;
     box-shadow: 0px 0px 8px rgba(0, 116, 217, 0.6);
 }
 
-/* תוכן ראשי */
-main {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-    background: white;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
+/* =================================== */
+/*         Download Button             */
+/* =================================== */
 
-section {
-    margin-bottom: 40px;
-}
-
-h2 {
-    color: #0074D9;
-    border-bottom: 2px solid #0074D9;
-    padding-bottom: 5px;
-}
-
-h3 {
-    margin-top: 20px;
-    color: #333;
-}
-
-/* רשימות */
-ul {
-    margin-top: 10px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* לינקים */
-a {
-    color: #0074D9;
-}
-
-/* כפתור הורדה */
 .download-btn {
-    background-color: #0074D9;
+    background-color: #3374ad;
     color: white;
     padding: 12px 25px;
     border-radius: 8px;
@@ -102,11 +212,14 @@ a {
 }
 
 .download-btn:hover {
-    background-color: #005fa3;
+    background-color: #284b64;
     transform: scale(1.05);
 }
 
-/* טאבים */
+/* =================================== */
+/*      Tab Buttons & Content          */
+/* =================================== */
+
 .tab-buttons {
     display: flex;
     justify-content: center;
@@ -116,7 +229,7 @@ a {
 }
 
 .tab-btn {
-    background-color: #0074D9;
+    background-color: #3374ad;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -130,11 +243,15 @@ a {
 }
 
 .tab-btn:hover {
-    background-color: #005fa3;
+    background-color: #32495a;
     transform: scale(1.05);
 }
 
-/* תוכן של טאבים */
+.active-tab {
+    background-color: #284b64;
+    box-shadow: 0px 0px 10px rgba(0, 95, 163, 0.6);
+}
+
 .tab-content {
     margin-top: 20px;
     background: white;
@@ -146,121 +263,10 @@ a {
     transition: opacity 0.5s ease;
 }
 
+/* =================================== */
+/*           Animations                */
+/* =================================== */
 
-
-.fixed-profile-pic {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 150px;
-    height: 150px;
-    z-index: 1000;
-}
-
-.fixed-profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0074D9;
-    color: white;
-    padding: 20px;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.header-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fixed-profile-pic {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 140px;
-    height: 140px;
-    margin-bottom: 15px;
-}
-
-.fixed-profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-.fixed-profile-pic img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-}
-
-.fixed-contact-info {
-    background: white;
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    font-size: 14px;
-    width: 200px;
-    text-align: left;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeInDown 1s ease forwards;
-    animation-delay: 0.6s; /* עיכוב קצת יותר גדול */
-}
-
-.fixed-contact-info:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-}
-
-.fixed-contact-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.fixed-contact-info ul li {
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.fixed-contact-info a {
-    color: #0074D9;
-    text-decoration: none;
-}
-
-.fixed-contact-info a:hover {
-    text-decoration: underline;
-}
-
-.header-right {
-    text-align: center;
-    font-family: Garamond, serif;
-    font-size: 28px;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeInDown 1s ease forwards;
-}
-
-/* הגדרת האנימציה */
 @keyframes fadeInDown {
     to {
         opacity: 1;
@@ -268,70 +274,68 @@ a {
     }
 }
 
-.active-tab {
-    background-color: #005fa3; /* כחול כהה יותר */
-    box-shadow: 0px 0px 10px rgba(0, 95, 163, 0.6);
-}
+/* =================================== */
+/*       Responsive Styles (Mobile)    */
+/* =================================== */
 
 @media (max-width: 768px) {
 
-  body {
-    padding: 10px;
-    font-size: 16px;
-  }
+    body {
+        padding: 10px;
+        font-size: 16px;
+    }
 
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  .fixed-profile-pic {
-    position: static;
-    width: 70px;
-    height: 70px;
-    margin: 10px auto;
-  }
+    .fixed-profile-pic {
+        position: static;
+        width: 70px;
+        height: 70px;
+        margin: 10px auto;
+    }
 
-  .fixed-profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    .fixed-profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-  .fixed-contact-info {
-    position: static;
-    text-align: center;
-    font-size: 12px;
-    width: auto;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
+    .fixed-contact-info {
+        position: static;
+        text-align: center;
+        font-size: 12px;
+        width: auto;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
 
-  .download-btn {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
-  }
+    .download-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
 
-  .tab-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .tab-btn {
-    width: 100%;
-    margin: 5px 0;
-    font-size: 16px;
-    padding: 10px;
-  }
+    .tab-btn {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 16px;
+        padding: 10px;
+    }
 
-  main {
-    padding: 15px;
-  }
+    main {
+        padding: 15px;
+    }
 
-  ul {
-    padding-left: 20px;
-  }
-
+    ul {
+        padding-left: 20px;
+    }
 }
