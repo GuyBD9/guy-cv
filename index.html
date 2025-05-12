@@ -122,7 +122,7 @@
 
     <!-- =================== Tab Switch Script =================== -->
     <script>
-        function showTab(tabId, event) {
+        function showTab(tabId, event = null) {
             var tabs = document.getElementsByClassName('tab-content');
             var buttons = document.getElementsByClassName('tab-btn');
 
@@ -131,27 +131,38 @@
                 buttons[i].classList.remove('active-tab');
             }
 
-            // Set active state to clicked button
-            event.target.classList.add('active-tab');
+            // If the function was triggered by an event (button click), mark that button
+            if (event) {
+                event.target.classList.add('active-tab');
+            } else {
+                // Otherwise, default to marking the first button as active (Home)
+                if (buttons.length > 0) {
+                    buttons[0].classList.add('active-tab');
+                }
+            }
 
-            // Fade out all tabs
+            // Fade out all tab content
             for (var i = 0; i < tabs.length; i++) {
                 tabs[i].style.opacity = '0';
                 tabs[i].style.transition = 'opacity 0.5s ease';
             }
 
-            // Show selected tab
-            setTimeout(function() {
+            setTimeout(function () {
                 for (var i = 0; i < tabs.length; i++) {
                     tabs[i].style.display = 'none';
                 }
                 var selectedTab = document.getElementById(tabId);
                 selectedTab.style.display = 'block';
-                setTimeout(function() {
+                setTimeout(function () {
                     selectedTab.style.opacity = '1';
                 }, 50);
             }, 300);
         }
+
+        // Automatically show the Home tab on page load
+        window.onload = function () {
+            showTab('home');
+        };
     </script>
 
 </body>
